@@ -1,4 +1,61 @@
-adf
-adf
-adf
-af
+[user]
+	name = murisly
+	email = murisly2015@gmail.com
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	smudge = git-lfs smudge %f
+	required = true
+	required = true
+	smudge = git-lfs smudge %f
+	required = true
+	smudge = git-lfs smudge %f
+	required = true
+	smudge = git-lfs smudge %f
+	required = true
+	smudge = git-lfs smudge %f
+	required = true
+	smudge = git-lfs smudge %f
+	required = true
+	smudge = git-lfs smudge %f
+	required = true
+	smudge = git-lfs smudge %f
+	required = true
+	smudge = git-lfs smudge %f
+	required = true
+	smudge = git-lfs smudge %f
+	required = true
+	smudge = git-lfs smudge %f
+	required = true
+	smudge = git-lfs smudge %f
+	required = true
+	smudge = git-lfs smudge %f
+	required = true
+	smudge = git-lfs smudge %f
+	required = true
+	smudge = git-lfs smudge %f
+	required = true
+	smudge = git-lfs smudge %f
+	required = true
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f
+[credential]
+[credential]
+[credential]
+	helper = store
+[gui]
+	recentrepo = D:/phpStudy/WWW/statistics
+[core]
+	autocrlf = false
+	excludesfile = 
+	safecrlf = true
+[push]
+	default = simple
+
+123
+123
+qwe
