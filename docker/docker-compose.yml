@@ -11,7 +11,7 @@ mysql:
     container_name: mysql
     environment: 
         - MYSQL_ROOT_PASSWORD=east
-    parts:
+    ports:
         - "3306:3306"
     volumes_from:
         - mysql-data
