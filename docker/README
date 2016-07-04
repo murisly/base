@@ -1,0 +1,8 @@
+
+# step 1: or use docker-compose container
+docker run -v "$(pwd)":"$(pwd)" \
+             -v /var/run/docker.sock:/var/run/docker.sock \
+             -e COMPOSE_PROJECT_NAME=$(basename "$(pwd)") \
+             --workdir="$(pwd)" \
+             -ti --rm \
+             dduportal/docker-compose:latest up -d
