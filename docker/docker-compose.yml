@@ -17,7 +17,7 @@ mysql:
         - mysql-data
 
 #php
-php-fpm
+php-fpm:
     image: php:5.6-fpm
     contain_name: php-fpm
     volumes:
