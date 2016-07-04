@@ -27,8 +27,8 @@ RUN docker-php-ext-install mcrypt mbstring zip bz2 pdo_mysql mysqli bcmath\
 
 RUN usermod -u 1000 www-data \
     && echo "alias ll='ls -l --color'" >> /root/.bashrc \
-    && mkdir /var/www/yungou
+    && mkdir /var/www/shenman
     
-WORKDIR /var/www/yungou
+WORKDIR /var/www/shenman
 
 CMD ["php-fpm"]
