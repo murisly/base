@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
         curl \
     && rm -r /var/lib/apt/lists/*
 
-RUN docker-php-ext-install mcrypt mbstring zip bz2 pdo_mysql mysqli bcmath\
+RUN docker-php-ext-install mcrypt mbstring zip bz2 pdo_mysql mysqli \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/ \
     && docker-php-ext-install gd \
     && cd / \
@@ -26,9 +26,6 @@ RUN docker-php-ext-install mcrypt mbstring zip bz2 pdo_mysql mysqli bcmath\
     && pecl install xdebug-2.4.0
 
 RUN usermod -u 1000 www-data \
-    && echo "alias ll='ls -l --color'" >> /root/.bashrc \
-    && mkdir /var/www/shenman
-    
-WORKDIR /var/www/shenman
+    && echo "alias ll='ls -l --color'" >> /root/.bashrc
 
-CMD ["php-fpm"]
+WORKDIR /var/www/shenman
