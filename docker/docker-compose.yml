@@ -1,7 +1,7 @@
 # data
 mysql-data:
     image: busybox
-    container_name: mysql-date
+    container_name: mysql-data
     volumes:
         - /var/lib/mysql
 
