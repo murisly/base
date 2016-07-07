@@ -6,3 +6,10 @@ docker run -v "$(pwd)":"$(pwd)" \
              --workdir="$(pwd)" \
              -ti --rm \
              dduportal/docker-compose:latest up -d
+
+
+# 全局初始化
+docker run --rm -it -v $(pwd):/app composer/composer:1.1 global require "fxp/composer-asset-plugin:^1.2.0"
+run --rm -v $(pwd):/app composer/composer install
+#创建base任务
+docker run --rm -it -v $(pwd):/app composer/composer:1.1 create-project --prefer-dist yiisoft/yii2-app-basic basic

@@ -30,7 +30,7 @@ php-fpm:
     links:
         - mysql
     extra_hosts:
-        - "devicehost:172.17.0.1"
+        - "devicehost:192.168.0.1"
     working_dir: /var/www
 
 # web server
