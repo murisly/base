@@ -24,13 +24,13 @@ php-fpm:
         - /var/www:/var/www
         - ./projects/php/conf.d/extensions.ini:/usr/local/etc/php/conf.d/extensions.ini
         - ./projects/php/conf.d/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
-        - ./projects/php/php-fpm.conf:/usr/local/etc/php-fpm.conf
+        #- ./projects/php/php-fpm.conf:/usr/local/etc/php-fpm.conf
     ports:
         - "9000:9000"
     links:
         - mysql
     extra_hosts:
-        - "devicehost:192.168.0.1"
+        - "devicehost:172.17.0.1"
     working_dir: /var/www
 
 # web server
