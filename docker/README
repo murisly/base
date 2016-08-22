@@ -6,3 +6,21 @@ docker run -v "$(pwd)":"$(pwd)" \
              --workdir="$(pwd)" \
              -ti --rm \
              dduportal/docker-compose:latest up -d
+
+
+# 创建docker容器
+docker run --name composer --entrypoint bash -it -v $(pwd):/app composer/composer:1.1
+
+# 指定国内镜像
+composer config -g repo.packagist composer https://packagist.phpcomposer.com
+
+# 全局初始化
+composer global require "fxp/composer-asset-plugin:^1.2.0"
+
+# 开始任务
+composer install
+
+#创建base任务
+composer create-project --prefer-dist yiisoft/yii2-app-basic basic
+
+2ef20f60ab6b3b405b6f44046d1069b26e0b528e
