@@ -2,8 +2,8 @@ sudo -i
 
 mkdir /var/www
 
-mkdir /var/www/bank
-mount -t vboxsf bank /var/www/bank
+mkdir /var/www/shenman
+mount -t vboxsf shenman /var/www/shenman
 
 exit
 cd /mnt/taotaole/server/docker
